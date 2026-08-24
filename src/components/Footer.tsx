@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { siteConfig } from '@/lib/config';
 import { cn } from '@/lib/utils';
 
@@ -51,9 +52,14 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6" aria-label={`${siteConfig.name} Home`}>
-              <span className="text-3xl lg:text-4xl font-black tracking-tight text-white select-none">
-                halt<span className="text-[#C0392B]">.co</span>
-              </span>
+              <Image
+                src="/logo-navbar.png"
+                alt="HALT.CO Logo"
+                width={48}
+                height={48}
+                className="w-12 h-12 lg:w-14 lg:h-14"
+                priority
+              />
             </Link>
             <p className="text-neutral-400 text-base leading-relaxed mb-8 max-w-xs">
               {siteConfig.description}

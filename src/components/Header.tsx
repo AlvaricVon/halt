@@ -36,9 +36,14 @@ export function Header() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2" aria-label={`${siteConfig.name} Home`}>
-              <span className="text-2xl lg:text-3xl font-black tracking-tight text-white select-none">
-                halt<span className="text-[#C0392B]">.co</span>
-              </span>
+              <Image
+                src="/logo-navbar.png"
+                alt="HALT.CO Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 lg:w-12 lg:h-12"
+                priority
+              />
             </Link>
             
             {/* Desktop Nav */}

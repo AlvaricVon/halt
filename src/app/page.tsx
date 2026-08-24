@@ -29,7 +29,7 @@ export default function HomePage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C0392B] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C0392B]" />
               </span>
-              Prototype Collection 001 — Live Now
+              Coming Soon
             </div>
             
             {/* Tagline */}
@@ -96,10 +96,10 @@ export default function HomePage() {
           <div className="mt-20 relative mx-auto max-w-5xl animate-slide-up delay-500">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-950">
               <Image
-                src="/logo.png"
+                src="/prototype.png"
                 alt="HALT.CO Prototype Collection"
                 fill
-                className="object-cover scale-110 opacity-5"
+                className="object-cover scale-110"
                 priority
                 sizes="100vw"
               />
@@ -113,7 +113,7 @@ export default function HomePage() {
                     className="mx-auto mb-6 opacity-30"
                   />
                   <p className="text-neutral-400 text-lg">Prototype Collection 001</p>
-                  <p className="text-neutral-600 text-sm mt-1">Scroll untuk melihat produk</p>
+                  <p className="text-neutral-600 text-sm mt-1">Coming Soon</p>
                 </div>
               </div>
             </div>
@@ -220,55 +220,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Coming Soon - Featured Products */}
+      <section className="py-20 lg:py-32 bg-neutral-950/50 border-y border-neutral-900">
+        <div className="container-custom">
+          <div className="text-center">
+            <span className="text-sm font-medium text-[#C0392B] uppercase tracking-wider">Coming Soon</span>
+            <h2 className="mt-2 text-3xl lg:text-4xl font-black tracking-tight text-white mb-4">
+              Produk Unggulan
+            </h2>
+            <p className="text-neutral-400 max-w-2xl mx-auto mb-8">
+              Koleksi terpilih yang merepresentasikan identitas HALT.CO. Sedang disiapkan dengan penuh perhatian.
+            </p>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#C0392B]/10 border border-[#C0392B]/20 text-[#C0392B] font-medium">
+              <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              Coming Soon
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prototype Collection Section */}
       <section id="prototype" className="py-20 lg:py-32 bg-neutral-950/50 border-y border-neutral-900">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium text-[#C0392B] uppercase tracking-wider">Prototype Collection 001</span>
+            <span className="text-sm font-medium text-[#C0392B] uppercase tracking-wider">Coming Soon</span>
             <h2 className="mt-2 text-3xl lg:text-4xl font-black tracking-tight text-white mb-4">
               Drop Perdana HALT.CO
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-neutral-400 max-w-2xl mx-auto mb-8">
               Koleksi pertama yang memulai semuanya. Desain liquid typography signature, 
               bahan premium, dan filosofi yang terbawa dalam setiap helai benang.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {newProducts.slice(0, 2).map((product, index) => (
-              <Link key={product.slug} href={`/product/${product.slug}`} className="group relative">
-                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-950">
-                  <Image
-                    src={product.images[0]}
-                    alt={product.name}
-                    fill
-                    className="object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-xs font-medium text-[#C0392B] uppercase tracking-wider mb-1">
-                      {product.category.toUpperCase()}
-                    </p>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2 group-hover:text-[#C0392B] transition-colors">
-                      {product.name}
-                    </h3>
-                    <p className="text-neutral-300 text-lg font-semibold">{formatPrice(product.price)}</p>
-                    {product.originalPrice && (
-                      <p className="text-neutral-500 text-sm line-through mt-1">{formatPrice(product.originalPrice)}</p>
-                    )}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link href="/shop?collection=prototype">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                Lihat Koleksi Lengkap
-              </Button>
-            </Link>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#C0392B]/10 border border-[#C0392B]/20 text-[#C0392B] font-medium">
+              <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              Coming Soon
+            </div>
           </div>
         </div>
       </section>
@@ -358,7 +348,7 @@ export default function HomePage() {
                   Mulai Belanja
                 </Button>
               </Link>
-              <Link href="https://wa.me/628123456789?text=Halo%20HALT.CO" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/6281293988757?text=Halo%20HALT.CO" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="xl" className="w-full sm:w-auto">
                   Tanya via WhatsApp
                 </Button>
