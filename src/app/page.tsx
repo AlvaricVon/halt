@@ -193,33 +193,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Products Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container-custom">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-            <div>
-              <span className="text-sm font-medium text-[#C0392B] uppercase tracking-wider">Featured</span>
-              <h2 className="mt-2 text-3xl lg:text-4xl font-black tracking-tight text-white">
-                Produk Unggulan
-              </h2>
-              <p className="mt-2 text-neutral-400">Koleksi terpilih yang merepresentasikan identitas HALT.CO</p>
-            </div>
-            <Link href="/shop" className="inline-flex items-center gap-2 text-sm font-semibold text-[#C0392B] hover:text-[#E74C3C] transition-colors lg:mt-0">
-              Lihat Semua
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product, index) => (
-              <ProductCard key={product.slug} product={product} priority={index < 2} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Coming Soon - Featured Products */}
       <section className="py-20 lg:py-32 bg-neutral-950/50 border-y border-neutral-900">
         <div className="container-custom">
